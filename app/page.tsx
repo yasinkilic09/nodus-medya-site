@@ -23,6 +23,17 @@ const serviceItems = [
       "Markanızın dijital kimliğini; içerik planı, görsel dil, paylaşım stratejisi ve takipçi iletişimiyle profesyonel şekilde yönetiriz.",
     accent: "border-[#D6B05D]/30 bg-[#D6B05D]/10 text-[#F5D98B]",
     slug: "sosyal-medya-yonetimi",
+    detail: {
+      focus: "Dijital marka kimliği",
+      approach: "Planlı içerik ve düzenli iletişim",
+      result: "Güçlü sosyal medya algısı",
+      deliverables: [
+        "Aylık içerik planı oluşturma",
+        "Post, story ve reels akışı kurgulama",
+        "Markaya uygun görsel dil belirleme",
+        "Etkileşim ve takipçi iletişimini güçlendirme",
+      ],
+    },
   },
   {
     number: "02",
@@ -31,6 +42,17 @@ const serviceItems = [
       "Meta, Google ve dijital reklam kanallarında bütçeyi doğru hedef kitleyle buluşturan ölçülebilir kampanya süreçleri oluştururuz.",
     accent: "border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#7DD3FC]",
     slug: "reklam-yonetimi",
+    detail: {
+      focus: "Doğru hedef kitleye ulaşım",
+      approach: "Veri odaklı kampanya yönetimi",
+      result: "Daha ölçülebilir reklam performansı",
+      deliverables: [
+        "Kampanya hedefi ve bütçe planlama",
+        "Meta ve Google reklam kurgusu",
+        "Hedef kitle ve lokasyon optimizasyonu",
+        "Performans takibi ve kampanya iyileştirme",
+      ],
+    },
   },
   {
     number: "03",
@@ -39,6 +61,17 @@ const serviceItems = [
       "Markanın konumlandırmasını, iletişim tonunu, hedef kitlesini ve büyüme rotasını netleştiren stratejik marka sistemi kurarız.",
     accent: "border-[#7C3AED]/30 bg-[#7C3AED]/10 text-[#C4B5FD]",
     slug: "marka-stratejisi",
+    detail: {
+      focus: "Marka konumlandırması",
+      approach: "Kimlik, ton ve hedef kitle analizi",
+      result: "Net ve güçlü marka algısı",
+      deliverables: [
+        "Marka dili ve iletişim tonu oluşturma",
+        "Hedef kitle ve rakip analizi",
+        "Dijital büyüme yönü belirleme",
+        "Marka mesajı ve değer önerisi netleştirme",
+      ],
+    },
   },
   {
     number: "04",
@@ -47,6 +80,17 @@ const serviceItems = [
       "Reels, post, story, kampanya metni ve yaratıcı içerik fikirleriyle markanın dijitalde güçlü ve tutarlı görünmesini sağlarız.",
     accent: "border-white/20 bg-white/10 text-white",
     slug: "icerik-uretimi",
+    detail: {
+      focus: "Yaratıcı ve tutarlı içerik",
+      approach: "Platforma uygun üretim mantığı",
+      result: "Daha profesyonel dijital görünüm",
+      deliverables: [
+        "Reels, post ve story fikirleri üretme",
+        "Reklam metni ve kampanya başlıkları hazırlama",
+        "Markaya uygun görsel konsept oluşturma",
+        "Paylaşım dili ve içerik akışı geliştirme",
+      ],
+    },
   },
   {
     number: "05",
@@ -55,14 +99,36 @@ const serviceItems = [
       "Markanızın arama motorlarında ve yapay zeka destekli arama deneyimlerinde daha görünür olması için içerik ve görünürlük stratejileri geliştiririz.",
     accent: "border-[#D6B05D]/30 bg-[#D6B05D]/10 text-[#F5D98B]",
     slug: "seo-geo-gorunurluk",
+    detail: {
+      focus: "Arama görünürlüğü",
+      approach: "SEO ve GEO uyumlu içerik stratejisi",
+      result: "Daha bulunabilir marka yapısı",
+      deliverables: [
+        "SEO uyumlu içerik başlıkları oluşturma",
+        "Google aramalarına uygun metin kurgusu",
+        "Yapay zekâ destekli aramalara yönelik görünürlük planı",
+        "Marka, hizmet ve lokasyon odaklı içerik stratejisi",
+      ],
+    },
   },
   {
     number: "06",
     title: "Teknoloji Destekli Medya Çözümleri",
     description:
       "Reklam, içerik ve medya yönetimi süreçlerini yazılım, veri ve yeni nesil dijital araçlarla daha verimli hale getiririz.",
-    accent: "border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#7DD3FC]", 
+    accent: "border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#7DD3FC]",
     slug: "teknoloji-destekli-medya-cozumleri",
+    detail: {
+      focus: "Yazılım ve medya birleşimi",
+      approach: "Veri, otomasyon ve yapay zekâ desteği",
+      result: "Daha akıllı medya yönetimi",
+      deliverables: [
+        "AdMind.Ai destekli reklam akışı",
+        "Kampanya, içerik ve müşteri süreci planlama",
+        "Veri odaklı performans değerlendirme",
+        "Medya yönetiminde otomasyon yaklaşımı geliştirme",
+      ],
+    },
   },
 ];
 
@@ -648,40 +714,56 @@ Mesaj: ${formData.message || "-"}`;
                     </p>
 
                     <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                      <div className="rounded-2xl border border-white/10 bg-[#05070D]/60 p-4">
-                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                          Odak
-                        </p>
-                        <p className="mt-2 text-sm font-bold text-white">
-                          Stratejik büyüme
-                        </p>
-                      </div>
+  <div className="rounded-2xl border border-white/10 bg-[#05070D]/60 p-4">
+    <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      Odak
+    </p>
+    <p className="mt-2 text-sm font-bold leading-6 text-white">
+      {item.detail.focus}
+    </p>
+  </div>
 
-                      <div className="rounded-2xl border border-white/10 bg-[#05070D]/60 p-4">
-                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                          Yaklaşım
-                        </p>
-                        <p className="mt-2 text-sm font-bold text-white">
-                          Marka özelinde planlama
-                        </p>
-                      </div>
+  <div className="rounded-2xl border border-white/10 bg-[#05070D]/60 p-4">
+    <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      Yaklaşım
+    </p>
+    <p className="mt-2 text-sm font-bold leading-6 text-white">
+      {item.detail.approach}
+    </p>
+  </div>
 
-                      <div className="rounded-2xl border border-white/10 bg-[#05070D]/60 p-4">
-                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                          Sonuç
-                        </p>
-                        <p className="mt-2 text-sm font-bold text-white">
-                          Ölçülebilir ilerleme
-                        </p>
-                      </div>
-                    </div>
+  <div className="rounded-2xl border border-white/10 bg-[#05070D]/60 p-4">
+    <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      Sonuç
+    </p>
+    <p className="mt-2 text-sm font-bold leading-6 text-white">
+      {item.detail.result}
+    </p>
+  </div>
+</div>
 
-                    <a
-                      href="#iletisim"
-                      className="mt-7 inline-flex items-center justify-center rounded-full border border-[#D6B05D]/30 bg-[#D6B05D]/10 px-6 py-3 text-sm font-black text-[#F5D98B] transition hover:-translate-y-1 hover:bg-[#D6B05D]/20"
-                    >
-                      Bu hizmet için görüşme talep et
-                    </a>
+<div className="mt-6 rounded-3xl border border-white/10 bg-[#05070D]/50 p-5">
+  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D6B05D]">
+    Bu hizmet kapsamında
+  </p>
+
+  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+    {item.detail.deliverables.map((deliverable) => (
+      <div
+        key={deliverable}
+        className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.035] p-4"
+      >
+        <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#D6B05D]/15 text-xs font-black text-[#F5D98B]">
+          ✓
+        </span>
+
+        <p className="text-sm leading-6 text-slate-300">
+          {deliverable}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
                   </div>
                 </div>
               </article>
