@@ -1813,24 +1813,175 @@ Ek Mesaj: ${formData.message || "-"}`;
             </div>
           </div>
 
-          <footer className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-            <p>© 2026 NODUS MEDYA. Tüm hakları saklıdır.</p>
+                <section className="relative overflow-hidden border-t border-white/10 bg-[#05070D] px-5 py-20 sm:px-8 lg:px-10">
+        <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[#D6B05D]/10 blur-[90px]" />
+        <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
 
-            <div className="flex flex-wrap gap-4">
-              <a href="#biz-kimiz" className="transition hover:text-white">
-                Biz Kimiz
+        <div className="relative mx-auto max-w-7xl rounded-[2.5rem] border border-[#D6B05D]/20 bg-gradient-to-br from-[#D6B05D]/12 via-white/[0.035] to-[#38BDF8]/10 p-7 shadow-xl backdrop-blur-xl sm:p-10 lg:p-12">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#F5D98B]">
+                NODUS MEDYA ile büyüme hattınızı kurun
+              </p>
+
+              <h2 className="mt-4 max-w-4xl text-3xl font-black leading-tight tracking-[-0.055em] text-white sm:text-5xl">
+                Markanızın reklam, medya ve teknoloji düğümünü birlikte çözelim.
+              </h2>
+
+              <p className="mt-5 max-w-3xl text-base leading-8 text-slate-300">
+                Sosyal medya yönetimi, reklam stratejisi, içerik üretimi, sektörünüze özel medya planı ve AdMind.Ai destekli teknoloji yaklaşımıyla markanız için daha sistemli bir büyüme süreci tasarlayabiliriz.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <a
+                href="#iletisim"
+                className="inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#070A12] transition hover:-translate-y-1 hover:bg-[#F5D98B]"
+              >
+                Teklif Formunu Doldur
               </a>
-              <a href="#hizmetler" className="transition hover:text-white">
-                Hizmetler
-              </a>
-              <a href="#nodus-metodu" className="transition hover:text-white">
-                NODUS Metodu
-              </a>
-              <a href="#teknoloji" className="transition hover:text-white">
-                Teknoloji
+
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.05] px-7 py-4 text-sm font-black text-white transition hover:-translate-y-1 hover:border-[#D6B05D]/40 hover:bg-white/[0.08]"
+              >
+                WhatsApp’tan Yaz
               </a>
             </div>
-          </footer>
+          </div>
+        </div>
+      </section>
+
+      <footer className="relative overflow-hidden border-t border-white/10 bg-[#03050A] px-5 py-14 sm:px-8 lg:px-10">
+        <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#D6B05D]/8 blur-[90px]" />
+        <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-[#38BDF8]/8 blur-[90px]" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.9fr_0.9fr]">
+            <div>
+              <a href="#" className="inline-flex items-center gap-4">
+                <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-1.5 backdrop-blur-xl">
+                  <Image
+                    src="/nodus-logo-512.png"
+                    alt="NODUS MEDYA Logo"
+                    width={120}
+                    height={120}
+                    sizes="64px"
+                    className="h-full w-full scale-[1.18] object-contain brightness-[1.35] contrast-[1.15]"
+                  />
+                </div>
+
+                <div>
+                  <p className="text-xl font-black tracking-[-0.04em] text-white">
+                    NODUS MEDYA
+                  </p>
+                  <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-[#D6B05D]">
+                    Yeni Nesil Medya Yönetimi
+                  </p>
+                </div>
+              </a>
+
+              <p className="mt-6 max-w-md text-sm leading-7 text-slate-400">
+                NODUS MEDYA; reklam, sosyal medya, marka stratejisi, içerik üretimi ve teknoloji destekli medya çözümleriyle markaların dijital büyüme düğümünü çözer.
+              </p>
+
+              <div className="mt-6 rounded-2xl border border-[#D6B05D]/20 bg-[#D6B05D]/10 p-4">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F5D98B]">
+                  Product Lab
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  AdMind.Ai, NODUS MEDYA ekibi tarafından geliştirilen yapay zekâ destekli reklam ve medya yönetimi MVP’sidir.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-black uppercase tracking-[0.2em] text-white">
+                Hızlı Linkler
+              </h3>
+
+              <div className="mt-5 grid gap-3">
+                {navItems.slice(0, 6).map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm font-medium text-slate-400 transition hover:text-[#F5D98B]"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-black uppercase tracking-[0.2em] text-white">
+                Hizmetler
+              </h3>
+
+              <div className="mt-5 grid gap-3">
+                {serviceItems.slice(0, 6).map((service) => (
+                  <a
+                    key={service.slug}
+                    href={`#${service.slug}`}
+                    className="text-sm font-medium text-slate-400 transition hover:text-[#F5D98B]"
+                  >
+                    {service.title}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-black uppercase tracking-[0.2em] text-white">
+                İletişim
+              </h3>
+
+              <div className="mt-5 grid gap-3">
+                {contactItems.map((item) => {
+                  const isExternal = item.href.startsWith("http");
+
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noreferrer" : undefined}
+                      className="group rounded-2xl border border-white/10 bg-white/[0.035] p-4 transition hover:border-[#D6B05D]/30 hover:bg-white/[0.06]"
+                    >
+                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                        {item.label}
+                      </p>
+                      <p className="mt-2 break-words text-sm font-bold text-slate-300 transition group-hover:text-white">
+                        {item.value}
+                      </p>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-7 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © 2026 NODUS MEDYA. Tüm hakları saklıdır.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <a href="#paketler" className="transition hover:text-[#F5D98B]">
+                Paketler
+              </a>
+              <a href="#admind-ai" className="transition hover:text-[#F5D98B]">
+                AdMind.Ai
+              </a>
+              <a href="#iletisim" className="transition hover:text-[#F5D98B]">
+                Teklif Al
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
         </div>
       </section>
     </main>
