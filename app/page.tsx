@@ -770,36 +770,36 @@ export default function NodusMedyaHomePage() {
           </div>
         </div>
       </section>
-            <section
+                 <section
         id="iletisim"
-        className="relative overflow-hidden border-t border-white/10 bg-[#070A12] px-5 py-24 sm:px-8 lg:px-10"
+        className="relative overflow-hidden border-t border-white/10 bg-[#070A12] px-4 py-20 sm:px-8 sm:py-24 lg:px-10"
       >
-        <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#D6B05D]/10 blur-[150px]" />
-        <div className="absolute -left-24 bottom-0 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[130px]" />
-        <div className="absolute -right-24 bottom-20 h-96 w-96 rounded-full bg-[#7C3AED]/10 blur-[130px]" />
+        <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#D6B05D]/10 blur-[140px]" />
+        <div className="absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-[#38BDF8]/10 blur-[120px]" />
+        <div className="absolute -right-24 bottom-20 h-80 w-80 rounded-full bg-[#7C3AED]/10 blur-[120px]" />
 
         <div className="relative mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-[2.5rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,_rgba(214,176,93,0.16),_transparent_34%),radial-gradient(circle_at_bottom_left,_rgba(56,189,248,0.13),_transparent_38%),rgba(255,255,255,0.045)] p-8 shadow-2xl backdrop-blur-2xl sm:p-10 lg:p-14">
-            <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,_rgba(214,176,93,0.14),_transparent_34%),radial-gradient(circle_at_bottom_left,_rgba(56,189,248,0.12),_transparent_38%),rgba(255,255,255,0.045)] p-6 shadow-2xl backdrop-blur-2xl sm:p-8 lg:rounded-[2.5rem] lg:p-12">
+            <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center">
               <div>
-                <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#D6B05D]">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#D6B05D] sm:text-sm sm:tracking-[0.28em]">
                   İletişim
                 </p>
 
-                <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.06em] text-white sm:text-5xl lg:text-7xl">
+                <h2 className="mt-5 max-w-4xl text-3xl font-black leading-[1.05] tracking-[-0.055em] text-white sm:text-5xl lg:text-6xl">
                   Markanızın dijital büyüme düğümünü birlikte çözelim.
                 </h2>
 
-                <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+                <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base sm:leading-8 lg:text-lg">
                   NODUS MEDYA ile reklam, sosyal medya, marka stratejisi ve teknoloji destekli medya yönetimi süreçlerinizi daha güçlü bir sisteme dönüştürmek için ilk görüşmeyi planlayın.
                 </p>
 
-                <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="group inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#080A12] shadow-2xl shadow-[#D6B05D]/20 transition hover:-translate-y-0.5 hover:bg-[#F5D98B]"
+                    className="group inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-6 py-4 text-sm font-black text-[#080A12] shadow-2xl shadow-[#D6B05D]/20 transition hover:-translate-y-0.5 hover:bg-[#F5D98B] sm:px-7"
                   >
                     NODUS MEDYA ile Görüş
                     <span className="ml-2 transition group-hover:translate-x-1">→</span>
@@ -807,46 +807,49 @@ export default function NodusMedyaHomePage() {
 
                   <a
                     href="mailto:nodusmedya09@gmail.com"
-                    className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] px-7 py-4 text-sm font-bold text-white backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white/[0.1]"
+                    className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] px-6 py-4 text-sm font-bold text-white backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white/[0.1] sm:px-7"
                   >
                     E-posta Gönder
                   </a>
                 </div>
               </div>
 
-              <div className="grid gap-4">
-                {contactItems.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                    className="group rounded-[2rem] border border-white/10 bg-[#05070D]/60 p-6 shadow-2xl backdrop-blur-2xl transition hover:-translate-y-1 hover:border-white/20 hover:bg-[#05070D]/80"
-                  >
-                    <div className="flex items-center justify-between gap-6">
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#D6B05D]">
-                          {item.label}
-                        </p>
-                        <p className="mt-3 text-lg font-black text-white">
-                          {item.value}
-                        </p>
-                      </div>
+              <div className="grid gap-3 sm:gap-4">
+                {contactItems.map((item) => {
+                  const isExternal = item.href.startsWith("http");
 
-                      <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white transition group-hover:translate-x-1 group-hover:border-[#D6B05D]/40 group-hover:text-[#D6B05D]">
-                        →
-                      </span>
-                    </div>
-                  </a>
-                ))}
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noreferrer" : undefined}
+                      className="group rounded-[1.5rem] border border-white/10 bg-[#05070D]/55 p-5 shadow-2xl backdrop-blur-2xl transition hover:-translate-y-1 hover:border-white/20 hover:bg-[#05070D]/80 sm:rounded-[2rem] sm:p-6"
+                    >
+                      <div className="flex items-center justify-between gap-4">
+                        <div className="min-w-0">
+                          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#D6B05D] sm:text-xs sm:tracking-[0.26em]">
+                            {item.label}
+                          </p>
+
+                          <p className="mt-3 break-words text-base font-black text-white sm:text-lg">
+                            {item.value}
+                          </p>
+                        </div>
+
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white transition group-hover:translate-x-1 group-hover:border-[#D6B05D]/40 group-hover:text-[#D6B05D] sm:h-11 sm:w-11">
+                          →
+                        </span>
+                      </div>
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
 
           <footer className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-            <p>
-              © 2026 NODUS MEDYA. Tüm hakları saklıdır.
-            </p>
+            <p>© 2026 NODUS MEDYA. Tüm hakları saklıdır.</p>
 
             <div className="flex flex-wrap gap-4">
               <a href="#biz-kimiz" className="transition hover:text-white">
