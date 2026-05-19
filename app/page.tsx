@@ -173,15 +173,15 @@ export default function NodusMedyaHomePage() {
 
         <header className="relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
         <a href="#" className="group flex items-center" aria-label="NODUS MEDYA ana sayfa">
-  <div className="relative flex h-24 w-24 shrink-0 items-center justify-center overflow-visible rounded-[1.6rem] border border-[#D6B05D]/20 bg-white/[0.025] p-1.5 shadow-[0_0_35px_rgba(214,176,93,0.16)] backdrop-blur-2xl transition duration-300 group-hover:border-[#D6B05D]/40 group-hover:bg-white/[0.045] group-hover:shadow-[0_0_45px_rgba(214,176,93,0.24)]">
-    <div className="absolute inset-0 rounded-[1.6rem] bg-gradient-to-br from-white/[0.04] via-transparent to-[#D6B05D]/[0.04]" />
+  <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-visible rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-1 shadow-lg backdrop-blur-2xl transition duration-300 group-hover:border-[#D6B05D]/40 group-hover:bg-white/[0.05] sm:h-20 sm:w-20 sm:rounded-[1.5rem] lg:h-24 lg:w-24 lg:rounded-[1.6rem]">
+    <div className="absolute inset-0 rounded-[inherit] bg-gradient-to-br from-white/[0.04] via-transparent to-[#D6B05D]/[0.06]" />
 
     <Image
       src="/nodus-logo-1.png"
       alt="NODUS MEDYA Logo"
       width={180}
       height={180}
-      className="relative z-10 h-full w-full scale-[1.18] object-contain brightness-[1.55] contrast-[1.25] saturate-[1.12] drop-shadow-[0_0_12px_rgba(214,176,93,0.55)]"
+      className="relative z-10 h-full w-full scale-[1.28] object-contain brightness-[1.45] contrast-[1.2] saturate-[1.08] sm:scale-[1.22] lg:scale-[1.16]"
       priority
     />
   </div>
