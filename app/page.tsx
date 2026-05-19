@@ -10,7 +10,7 @@ const navItems = [
   { label: "NODUS Metodu", href: "#nodus-metodu" },
   { label: "AdMind.Ai", href: "#admind-ai" },
   { label: "Teknoloji", href: "#teknoloji" },
-  { label: "SSS", href: "#sss" },
+  { label: "Paketler", href: "#paketler" },
   { label: "İletişim", href: "#iletisim" },
 ];
 
@@ -308,6 +308,61 @@ const sectorItems = [
     description:
       "Marka prestijini, kurumsal algıyı ve dijital güveni güçlendiren uzun vadeli medya yönetimi süreçleri tasarlarız.",
     icon: "◆",
+  },
+];
+
+const packageItems = [
+  {
+    name: "Başlangıç Paketi",
+    badge: "Yeni Başlayan Markalar",
+    description:
+      "Dijitalde profesyonel görünmeye başlamak isteyen işletmeler için temel sosyal medya ve marka görünürlüğü paketi.",
+    bestFor: "Yeni hesaplar, küçük işletmeler ve dijital kimliğini kurmak isteyen markalar",
+    features: [
+      "Temel sosyal medya içerik planı",
+      "Markaya uygun görsel dil yönlendirmesi",
+      "Aylık paylaşım akışı önerisi",
+      "Temel reklam ve görünürlük danışmanlığı",
+    ],
+  },
+  {
+    name: "Büyüme Paketi",
+    badge: "En Çok Tercih Edilen",
+    description:
+      "Sosyal medya, reklam ve içerik üretimini birlikte yürütmek isteyen markalar için daha kapsamlı büyüme planı.",
+    bestFor: "Düzenli içerik, reklam ve müşteri kazanımı hedefleyen işletmeler",
+    features: [
+      "Sosyal medya yönetim planı",
+      "Reklam kampanyası kurgusu",
+      "İçerik ve kampanya metni üretimi",
+      "Performans takibi ve iyileştirme önerileri",
+    ],
+  },
+  {
+    name: "Premium Medya Yönetimi",
+    badge: "Kurumsal Görünüm",
+    description:
+      "Marka algısını güçlendirmek, daha prestijli görünmek ve uzun vadeli medya yönetimi isteyen işletmeler için premium plan.",
+    bestFor: "Kurumsal markalar, güçlü görsel kimlik ve profesyonel medya yönetimi isteyen işletmeler",
+    features: [
+      "Marka stratejisi ve iletişim dili",
+      "Premium sosyal medya içerik sistemi",
+      "Reklam ve kampanya yönetimi",
+      "Aylık medya performans değerlendirmesi",
+    ],
+  },
+  {
+    name: "Teknoloji Destekli Paket",
+    badge: "AdMind.Ai Destekli",
+    description:
+      "Reklam, içerik, müşteri mesajı ve kampanya performansını teknoloji destekli bir yapıyla yönetmek isteyen markalar için özel plan.",
+    bestFor: "Yazılım, Ar-Ge, teknoloji odaklı markalar ve veriye dayalı büyüme isteyen işletmeler",
+    features: [
+      "AdMind.Ai destekli reklam paketi yaklaşımı",
+      "Kampanya ve müşteri dönüşüm takibi",
+      "Görsel brief ve içerik akışı planlama",
+      "Performans karnesi ve optimizasyon mantığı",
+    ],
   },
 ];
 
@@ -907,6 +962,117 @@ Mesaj: ${formData.message || "-"}`;
                 className="inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#070A12] transition hover:-translate-y-1 hover:bg-[#F5D98B]"
               >
                 Sektörüme Uygun Plan Al
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+            <section
+        id="paketler"
+        className="relative overflow-hidden border-t border-white/10 bg-[#070A12] px-5 py-24 sm:px-8 lg:px-10"
+      >
+        <div className="absolute -left-24 top-16 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
+        <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[90px]" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#D6B05D]">
+              Paketler / Hizmet Planları
+            </p>
+
+            <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.055em] text-white sm:text-5xl lg:text-6xl">
+              Markanızın ihtiyacına göre doğru medya yönetimi planını seçin.
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
+              NODUS MEDYA’da paketler sabit kalıplar olarak değil; markanın sektörü,
+              hedef kitlesi, mevcut dijital durumu ve büyüme hedeflerine göre şekillenen
+              stratejik hizmet planları olarak ele alınır.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-5 lg:grid-cols-2 xl:grid-cols-4">
+            {packageItems.map((plan) => (
+              <article
+                key={plan.name}
+                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-xl backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#D6B05D]/35 hover:bg-white/[0.065] sm:p-7"
+              >
+                <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[#D6B05D]/5 blur-3xl transition group-hover:bg-[#D6B05D]/10" />
+
+                <div className="relative flex h-full flex-col">
+                  <div className="mb-6 inline-flex w-fit rounded-full border border-[#D6B05D]/25 bg-[#D6B05D]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#F5D98B]">
+                    {plan.badge}
+                  </div>
+
+                  <h3 className="text-2xl font-black tracking-[-0.04em] text-white">
+                    {plan.name}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-7 text-slate-400">
+                    {plan.description}
+                  </p>
+
+                  <div className="mt-6 rounded-2xl border border-white/10 bg-[#05070D]/55 p-4">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                      Kimler için uygun?
+                    </p>
+
+                    <p className="mt-2 text-sm leading-6 text-slate-300">
+                      {plan.bestFor}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 grid gap-3">
+                    {plan.features.map((feature) => (
+                      <div
+                        key={feature}
+                        className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.035] p-4"
+                      >
+                        <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#D6B05D]/15 text-xs font-black text-[#F5D98B]">
+                          ✓
+                        </span>
+
+                        <p className="text-sm leading-6 text-slate-300">
+                          {feature}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href="#iletisim"
+                    className="mt-7 inline-flex w-full items-center justify-center rounded-full border border-[#D6B05D]/30 bg-[#D6B05D]/10 px-6 py-3 text-sm font-black text-[#F5D98B] transition hover:-translate-y-1 hover:bg-[#D6B05D]/20"
+                  >
+                    Bu paket için görüşme talep et
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-14 rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-xl sm:p-8">
+            <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#D6B05D]">
+                  Fiyatlandırma yaklaşımı
+                </p>
+
+                <h3 className="mt-3 text-2xl font-black tracking-[-0.04em] text-white sm:text-3xl">
+                  Her marka için aynı fiyat değil, ihtiyaca göre doğru kapsam.
+                </h3>
+
+                <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-400">
+                  Paket kapsamı; içerik sayısı, reklam yönetimi ihtiyacı, sektör,
+                  kampanya hedefi, tasarım yoğunluğu ve teknoloji desteğine göre netleştirilir.
+                  Bu yüzden en doğru plan, kısa bir ön görüşme sonrası belirlenir.
+                </p>
+              </div>
+
+              <a
+                href="#iletisim"
+                className="inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#070A12] transition hover:-translate-y-1 hover:bg-[#F5D98B]"
+              >
+                Bana Uygun Paketi Belirle
               </a>
             </div>
           </div>
