@@ -7,6 +7,7 @@ const navItems = [
   { label: "Biz Kimiz", href: "#biz-kimiz" },
   { label: "Hizmetler", href: "#hizmetler" },
   { label: "NODUS Metodu", href: "#nodus-metodu" },
+  { label: "AdMind.Ai", href: "#admind-ai" },
   { label: "Teknoloji", href: "#teknoloji" },
   { label: "SSS", href: "#sss" },
   { label: "İletişim", href: "#iletisim" },
@@ -169,6 +170,15 @@ const contactItems = [
     value: "Aydın / Türkiye",
     href: "#",
   },
+];
+
+const admindHighlights = [
+  "AI destekli reklam paketi oluşturma",
+  "Sosyal medya içerik ve kampanya akışı",
+  "Müşteri mesajlarını fırsata dönüştürme",
+  "Lead / müşteri adayı takibi",
+  "Kampanya performans karnesi",
+  "Görsel brief ve reklam prompt üretimi",
 ];
 
 const faqItems = [
@@ -808,6 +818,100 @@ Mesaj: ${formData.message || "-"}`;
                 Her kampanya, her içerik ve her reklam süreci; performans takibi ve sürekli iyileştirme mantığıyla yönetilir.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+            <section
+        id="admind-ai"
+        className="relative overflow-hidden border-t border-white/10 bg-[#05070D] px-5 py-24 sm:px-8 lg:px-10"
+      >
+        <div className="absolute -left-24 top-20 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[90px]" />
+        <div className="absolute -right-24 bottom-10 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
+
+        <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#D6B05D]">
+              NODUS MEDYA Teknolojisi
+            </p>
+
+            <h2 className="mt-5 max-w-4xl text-4xl font-black leading-[1.03] tracking-[-0.055em] text-white sm:text-5xl lg:text-6xl">
+              AdMind.Ai ile reklam yönetimini teknolojiyle güçlendiriyoruz.
+            </h2>
+
+            <p className="mt-7 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
+              AdMind.Ai, NODUS MEDYA ekibi tarafından geliştirilen yapay zekâ destekli reklam ve medya yönetimi platformudur. 
+              Markaların reklam fikrinden içerik üretimine, müşteri mesajlarından performans analizine kadar olan sürecini daha akıllı, daha hızlı ve daha ölçülebilir hale getirmek için tasarlanmıştır.
+            </p>
+
+            <p className="mt-5 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
+              Bu teknoloji yaklaşımı sayesinde NODUS MEDYA; yalnızca içerik üreten bir ajans değil, reklam süreçlerini yazılım, veri ve yapay zekâ ile geliştiren yeni nesil bir medya yönetimi markası olarak konumlanır.
+            </p>
+
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#iletisim"
+                className="inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#070A12] transition hover:-translate-y-1 hover:bg-[#F5D98B]"
+              >
+                AdMind.Ai Hakkında Bilgi Al
+              </a>
+
+              <a
+                href="https://admind-ai-gold.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-7 py-4 text-sm font-black text-white transition hover:-translate-y-1 hover:border-[#D6B05D]/40 hover:bg-white/[0.07]"
+              >
+                Canlı MVP&apos;yi İncele
+              </a>
+            </div>
+          </div>
+
+          <div className="relative rounded-[2.2rem] border border-white/10 bg-white/[0.04] p-5 shadow-xl backdrop-blur-xl sm:p-7">
+            <div className="absolute inset-0 rounded-[inherit] bg-gradient-to-br from-[#D6B05D]/10 via-transparent to-[#38BDF8]/10" />
+
+            <div className="relative">
+              <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.24em] text-slate-500">
+                    Product Lab
+                  </p>
+                  <h3 className="mt-2 text-2xl font-black tracking-[-0.04em] text-white">
+                    AdMind.Ai
+                  </h3>
+                </div>
+
+                <div className="rounded-full border border-[#D6B05D]/30 bg-[#D6B05D]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#F5D98B]">
+                  AI MVP
+                </div>
+              </div>
+
+              <div className="mt-7 grid gap-3">
+                {admindHighlights.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#05070D]/60 p-4"
+                  >
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#D6B05D]/10 text-sm font-black text-[#F5D98B]">
+                      ✓
+                    </div>
+
+                    <p className="text-sm font-semibold leading-6 text-slate-300">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-7 rounded-3xl border border-[#D6B05D]/20 bg-[#D6B05D]/10 p-5">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#F5D98B]">
+                  NODUS farkı
+                </p>
+
+                <p className="mt-3 text-sm leading-7 text-slate-300">
+                  Reklam yönetimini yalnızca paylaşım ve tasarım süreci olarak değil; strateji, otomasyon, müşteri dönüşümü ve performans ölçümüyle birlikte ele alan bütünleşik bir sistem geliştiriyoruz.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
