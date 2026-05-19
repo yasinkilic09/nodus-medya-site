@@ -199,6 +199,50 @@ const faqItems = [
   },
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nodus-medya-site.vercel.app/#organization",
+      name: "NODUS MEDYA",
+      url: "https://nodus-medya-site.vercel.app",
+      logo: "https://nodus-medya-site.vercel.app/nodus-logo.png",
+      email: "nodusmedya09@gmail.com",
+      telephone: "+90 554 185 98 51",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Aydın",
+        addressCountry: "TR",
+      },
+      sameAs: ["https://www.instagram.com/nodus_medya"],
+      description:
+        "NODUS MEDYA; reklam, sosyal medya, marka stratejisi ve teknoloji destekli medya yönetimi çözümleri sunan yeni nesil bir medya markasıdır.",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nodus-medya-site.vercel.app/#website",
+      url: "https://nodus-medya-site.vercel.app",
+      name: "NODUS MEDYA",
+      publisher: {
+        "@id": "https://nodus-medya-site.vercel.app/#organization",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nodus-medya-site.vercel.app/#faq",
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    },
+  ],
+};
+
 export default function NodusMedyaHomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -229,6 +273,12 @@ Mesaj: ${formData.message || "-"}`;
 
   return (
     <main className="min-h-screen bg-[#05070D] text-white">
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(structuredData),
+    }}
+  />
       <section className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_right,_rgba(56,189,248,0.16),_transparent_34%),radial-gradient(circle_at_bottom_left,_rgba(214,176,93,0.14),_transparent_32%),linear-gradient(135deg,_#05070D_0%,_#0B1020_48%,_#111827_100%)]">
         <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.8)_1px,transparent_1px)] [background-size:64px_64px]" />
         <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[#7C3AED]/20 blur-[120px]" />
