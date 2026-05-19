@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 
 const navItems = [
   { label: "Biz Kimiz", href: "#biz-kimiz" },
@@ -97,6 +97,16 @@ const methodSteps = [
   },
 ];
 
+const serviceOptions = [
+  "Sosyal Medya Yönetimi",
+  "Reklam Yönetimi",
+  "Marka Stratejisi",
+  "İçerik Üretimi",
+  "SEO & GEO Görünürlük",
+  "Teknoloji Destekli Medya Çözümleri",
+  "Genel Görüşme",
+];
+
 const whyItems = [
   {
     title: "Strateji Odaklı Yaklaşım",
@@ -162,6 +172,31 @@ const contactItems = [
 
 export default function NodusMedyaHomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const [formData, setFormData] = useState({
+    name: "",
+    brand: "",
+    phone: "",
+    service: "Sosyal Medya Yönetimi",
+    message: "",
+  });
+
+  const leadMessage = `Merhaba NODUS MEDYA, web siteniz üzerinden bilgi almak istiyorum.
+
+Ad Soyad: ${formData.name || "-"}
+Marka / İşletme: ${formData.brand || "-"}
+Telefon: ${formData.phone || "-"}
+İlgilendiğim Hizmet: ${formData.service || "-"}
+Mesaj: ${formData.message || "-"}`;
+
+  const leadWhatsappUrl = `https://wa.me/905541859851?text=${encodeURIComponent(
+    leadMessage
+  )}`;
+
+  function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    window.open(leadWhatsappUrl, "_blank", "noopener,noreferrer");
+  }
 
   return (
     <main className="min-h-screen bg-[#05070D] text-white">
@@ -845,6 +880,109 @@ export default function NodusMedyaHomePage() {
                   );
                 })}
               </div>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl backdrop-blur-2xl sm:p-8 lg:p-10">
+            <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#38BDF8]">
+                  Teklif Talep Formu
+                </p>
+
+                <h3 className="mt-4 text-3xl font-black leading-tight tracking-[-0.05em] text-white sm:text-4xl">
+                  İhtiyacınızı yazın, görüşmeyi WhatsApp üzerinden başlatalım.
+                </h3>
+
+                <p className="mt-5 text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
+                  Formu doldurduğunuzda bilgileriniz otomatik olarak WhatsApp mesajına dönüşür. Böylece NODUS MEDYA ile hızlı ve düzenli bir ön görüşme başlatabilirsiniz.
+                </p>
+              </div>
+
+              <form onSubmit={handleFormSubmit} className="grid gap-4">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <input
+                    type="text"
+                    required
+                    placeholder="Ad Soyad"
+                    value={formData.name}
+                    onChange={(event) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        name: event.target.value,
+                      }))
+                    }
+                    className="w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-[#D6B05D]/50"
+                  />
+
+                  <input
+                    type="text"
+                    required
+                    placeholder="Marka / İşletme Adı"
+                    value={formData.brand}
+                    onChange={(event) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        brand: event.target.value,
+                      }))
+                    }
+                    className="w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-[#D6B05D]/50"
+                  />
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <input
+                    type="tel"
+                    placeholder="Telefon"
+                    value={formData.phone}
+                    onChange={(event) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        phone: event.target.value,
+                      }))
+                    }
+                    className="w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-[#D6B05D]/50"
+                  />
+
+                  <select
+                    value={formData.service}
+                    onChange={(event) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        service: event.target.value,
+                      }))
+                    }
+                    className="w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition focus:border-[#D6B05D]/50"
+                  >
+                    {serviceOptions.map((service) => (
+                      <option key={service} value={service} className="bg-[#05070D] text-white">
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <textarea
+                  rows={5}
+                  placeholder="Kısaca ihtiyacınızı yazın..."
+                  value={formData.message}
+                  onChange={(event) =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      message: event.target.value,
+                    }))
+                  }
+                  className="w-full resize-none rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-[#D6B05D]/50"
+                />
+
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#080A12] shadow-2xl shadow-[#D6B05D]/20 transition hover:-translate-y-0.5 hover:bg-[#F5D98B]"
+                >
+                  Formu WhatsApp’tan Gönder
+                  <span className="ml-2">→</span>
+                </button>
+              </form>
             </div>
           </div>
 
