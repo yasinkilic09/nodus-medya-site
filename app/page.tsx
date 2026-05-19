@@ -502,7 +502,8 @@ Ek Mesaj: ${formData.message || "-"}`;
         <div className="absolute -right-24 top-28 h-72 w-72 rounded-full bg-[#38BDF8]/20 blur-[75px]" />
         <div className="absolute -bottom-24 left-10 h-72 w-72 rounded-full bg-[#D6B05D]/10 blur-[75px]" />
 
-        <header className="relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
+        <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#05070D]/85 px-5 py-3 shadow-xl backdrop-blur-xl sm:px-8 lg:px-10">
+  <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <a href="#" className="group flex items-center" aria-label="NODUS MEDYA ana sayfa">
   <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-visible rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-1 shadow-lg backdrop-blur-xl transition duration-300 group-hover:border-[#D6B05D]/40 group-hover:bg-white/[0.05] sm:h-20 sm:w-20 sm:rounded-[1.5rem] lg:h-24 lg:w-24 lg:rounded-[1.6rem]">
     <div className="absolute inset-0 rounded-[inherit] bg-gradient-to-br from-white/[0.04] via-transparent to-[#D6B05D]/[0.06]" />
@@ -553,10 +554,11 @@ Ek Mesaj: ${formData.message || "-"}`;
               <span className="block h-0.5 w-5 rounded-full bg-white" />
             </div>
           </button>
+          </div>
         </header>
 
         {isMenuOpen && (
-          <div className="relative z-30 mx-5 rounded-3xl border border-white/10 bg-[#0B1020]/95 p-4 shadow-xl backdrop-blur-xl lg:hidden">
+          <div className="fixed left-5 right-5 top-20 z-50 rounded-3xl border border-white/10 bg-[#0B1020]/95 p-4 shadow-xl backdrop-blur-xl lg:hidden">
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <a
@@ -579,7 +581,7 @@ Ek Mesaj: ${formData.message || "-"}`;
           </div>
         )}
 
-        <div className="relative z-10 mx-auto grid min-h-[calc(100vh-92px)] w-full max-w-7xl items-center gap-12 px-5 pb-20 pt-12 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:px-10 lg:pb-24 lg:pt-8">
+        <div className="relative z-10 mx-auto grid min-h-[calc(100vh-92px)] w-full max-w-7xl items-center gap-12 px-5 pb-20 pt-32 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:px-10 lg:pb-24 lg:pt-32">
           <div className="max-w-3xl">
             <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 backdrop-blur-xl">
               <span className="h-2 w-2 rounded-full bg-[#38BDF8] shadow-[0_0_20px_rgba(56,189,248,0.95)]" />
