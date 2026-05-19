@@ -281,23 +281,24 @@ Mesaj: ${formData.message || "-"}`;
   />
       <section className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_right,_rgba(56,189,248,0.16),_transparent_34%),radial-gradient(circle_at_bottom_left,_rgba(214,176,93,0.14),_transparent_32%),linear-gradient(135deg,_#05070D_0%,_#0B1020_48%,_#111827_100%)]">
         <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.8)_1px,transparent_1px)] [background-size:64px_64px]" />
-        <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[#7C3AED]/20 blur-[120px]" />
-        <div className="absolute -right-24 top-28 h-72 w-72 rounded-full bg-[#38BDF8]/20 blur-[110px]" />
-        <div className="absolute -bottom-24 left-10 h-72 w-72 rounded-full bg-[#D6B05D]/10 blur-[110px]" />
+        <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[#7C3AED]/20 blur-[80px]" />
+        <div className="absolute -right-24 top-28 h-72 w-72 rounded-full bg-[#38BDF8]/20 blur-[75px]" />
+        <div className="absolute -bottom-24 left-10 h-72 w-72 rounded-full bg-[#D6B05D]/10 blur-[75px]" />
 
         <header className="relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
         <a href="#" className="group flex items-center" aria-label="NODUS MEDYA ana sayfa">
-  <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-visible rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-1 shadow-lg backdrop-blur-2xl transition duration-300 group-hover:border-[#D6B05D]/40 group-hover:bg-white/[0.05] sm:h-20 sm:w-20 sm:rounded-[1.5rem] lg:h-24 lg:w-24 lg:rounded-[1.6rem]">
+  <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-visible rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-1 shadow-lg backdrop-blur-xl transition duration-300 group-hover:border-[#D6B05D]/40 group-hover:bg-white/[0.05] sm:h-20 sm:w-20 sm:rounded-[1.5rem] lg:h-24 lg:w-24 lg:rounded-[1.6rem]">
     <div className="absolute inset-0 rounded-[inherit] bg-gradient-to-br from-white/[0.04] via-transparent to-[#D6B05D]/[0.06]" />
 
     <Image
-      src="/nodus-logo-512.png"
-      alt="NODUS MEDYA Logo"
-      width={180}
-      height={180}
-      className="relative z-10 h-full w-full scale-[1.28] object-contain brightness-[1.45] contrast-[1.2] saturate-[1.08] sm:scale-[1.22] lg:scale-[1.16]"
-      priority
-    />
+  src="/nodus-logo-512.png"
+  alt="NODUS MEDYA Logo"
+  width={180}
+  height={180}
+  sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+  className="relative z-10 h-full w-full scale-[1.28] object-contain brightness-[1.45] contrast-[1.2] saturate-[1.08] sm:scale-[1.22] lg:scale-[1.16]"
+  priority
+/>
   </div>
 </a>
 
@@ -338,7 +339,7 @@ Mesaj: ${formData.message || "-"}`;
         </header>
 
         {isMenuOpen && (
-          <div className="relative z-30 mx-5 rounded-3xl border border-white/10 bg-[#0B1020]/95 p-4 shadow-2xl backdrop-blur-2xl lg:hidden">
+          <div className="relative z-30 mx-5 rounded-3xl border border-white/10 bg-[#0B1020]/95 p-4 shadow-xl backdrop-blur-xl lg:hidden">
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <a
@@ -415,29 +416,29 @@ Mesaj: ${formData.message || "-"}`;
             <div className="absolute bottom-24 right-8 h-px w-72 -rotate-12 bg-gradient-to-r from-transparent via-[#D6B05D]/50 to-transparent" />
             <div className="absolute left-24 top-16 h-80 w-px rotate-[32deg] bg-gradient-to-b from-transparent via-white/20 to-transparent" />
 
-            <div className="relative flex h-60 w-60 items-center justify-center rounded-[3rem] border border-white/15 bg-white/[0.06] shadow-2xl shadow-cyan-500/10 backdrop-blur-2xl">
+            <div className="relative flex h-60 w-60 items-center justify-center rounded-[3rem] border border-white/15 bg-white/[0.06] shadow-2xl shadow-cyan-500/10 backdrop-blur-xl">
               <div className="absolute h-36 w-36 rounded-[2rem] border border-[#D6B05D]/50 rotate-45" />
               <div className="absolute h-28 w-28 rounded-full border border-[#38BDF8]/50" />
               <div className="absolute h-20 w-20 rounded-[1.5rem] border border-white/20 -rotate-12" />
-              <div className="flex h-44 w-44 items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-[0_0_90px_rgba(214,176,93,0.22)] backdrop-blur-2xl">
+              <div className="flex h-44 w-44 items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-[0_0_60px_rgba(214,176,93,0.18)] backdrop-blur-xl">
   <Image
     src="/nodus-logo-512.png"
     alt="NODUS MEDYA Logo"
     width={250}
     height={250}
+    sizes="176px"
     className="h-full w-full object-contain brightness-[1.35] contrast-[1.2] saturate-[1.08]"
-    priority
   />
 </div>
             </div>
 
-            <div className="absolute right-0 top-20 rounded-3xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl backdrop-blur-2xl">
+            <div className="absolute right-0 top-20 rounded-3xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl backdrop-blur-xl">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#D6B05D]">Nodus Signal</p>
               <p className="mt-2 text-2xl font-black text-white">+ Strateji</p>
               <p className="mt-1 text-sm text-slate-400">Marka büyüme haritası</p>
             </div>
 
-            <div className="absolute bottom-20 left-0 rounded-3xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl backdrop-blur-2xl">
+            <div className="absolute bottom-20 left-0 rounded-3xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl backdrop-blur-xl">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#38BDF8]">Media Flow</p>
               <p className="mt-2 text-2xl font-black text-white">Ölçülebilir</p>
               <p className="mt-1 text-sm text-slate-400">Reklam ve içerik sistemi</p>
@@ -460,8 +461,8 @@ Mesaj: ${formData.message || "-"}`;
       </section>
 
       <section id="biz-kimiz" className="relative overflow-hidden border-t border-white/10 bg-[#05070D] px-5 py-24 sm:px-8 lg:px-10">
-        <div className="absolute left-0 top-24 h-80 w-80 rounded-full bg-[#38BDF8]/10 blur-[120px]" />
-        <div className="absolute bottom-10 right-0 h-80 w-80 rounded-full bg-[#D6B05D]/10 blur-[120px]" />
+        <div className="absolute left-0 top-24 h-80 w-80 rounded-full bg-[#38BDF8]/10 blur-[80px]" />
+        <div className="absolute bottom-10 right-0 h-80 w-80 rounded-full bg-[#D6B05D]/10 blur-[80px]" />
 
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
@@ -478,7 +479,7 @@ Mesaj: ${formData.message || "-"}`;
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 shadow-2xl backdrop-blur-2xl">
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 shadow-2xl backdrop-blur-xl">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D6B05D]/30 bg-[#D6B05D]/10 text-xl">01</div>
               <h3 className="text-xl font-black text-white">Stratejik Çözüm</h3>
               <p className="mt-3 text-sm leading-7 text-slate-400">
@@ -486,7 +487,7 @@ Mesaj: ${formData.message || "-"}`;
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 shadow-2xl backdrop-blur-2xl sm:translate-y-8">
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 shadow-2xl backdrop-blur-xl sm:translate-y-8">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#38BDF8]/30 bg-[#38BDF8]/10 text-xl">02</div>
               <h3 className="text-xl font-black text-white">Yeni Nesil Medya</h3>
               <p className="mt-3 text-sm leading-7 text-slate-400">
@@ -494,7 +495,7 @@ Mesaj: ${formData.message || "-"}`;
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 shadow-2xl backdrop-blur-2xl">
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 shadow-2xl backdrop-blur-xl">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#7C3AED]/30 bg-[#7C3AED]/10 text-xl">03</div>
               <h3 className="text-xl font-black text-white">Teknoloji Odağı</h3>
               <p className="mt-3 text-sm leading-7 text-slate-400">
@@ -502,7 +503,7 @@ Mesaj: ${formData.message || "-"}`;
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 shadow-2xl backdrop-blur-2xl sm:translate-y-8">
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 shadow-2xl backdrop-blur-xl sm:translate-y-8">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/10 text-xl">04</div>
               <h3 className="text-xl font-black text-white">Premium Kimlik</h3>
               <p className="mt-3 text-sm leading-7 text-slate-400">
@@ -514,8 +515,8 @@ Mesaj: ${formData.message || "-"}`;
       </section>
 
             <section id="hizmetler" className="relative overflow-hidden border-t border-white/10 bg-[#070A12] px-5 py-24 sm:px-8 lg:px-10">
-        <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[130px]" />
-        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[#7C3AED]/10 blur-[130px]" />
+        <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[#7C3AED]/10 blur-[90px]" />
 
         <div className="relative mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
@@ -538,7 +539,7 @@ Mesaj: ${formData.message || "-"}`;
             {serviceItems.map((service) => (
               <article
                 key={service.number}
-                className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
+                className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
               >
                 <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/5 blur-3xl transition group-hover:bg-[#38BDF8]/10" />
 
@@ -562,7 +563,7 @@ Mesaj: ${formData.message || "-"}`;
             ))}
           </div>
 
-          <div className="mt-14 rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-2xl sm:flex sm:items-center sm:justify-between sm:p-8">
+          <div className="mt-14 rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-xl sm:flex sm:items-center sm:justify-between sm:p-8">
             <div>
               <h3 className="text-2xl font-black tracking-[-0.04em] text-white">
                 Hangi hizmete ihtiyacınız olduğunu birlikte netleştirelim.
@@ -585,8 +586,8 @@ Mesaj: ${formData.message || "-"}`;
         id="nodus-metodu"
         className="relative overflow-hidden border-t border-white/10 bg-[#05070D] px-5 py-24 sm:px-8 lg:px-10"
       >
-        <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[#D6B05D]/10 blur-[130px]" />
-        <div className="absolute -right-20 bottom-20 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[130px]" />
+        <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[#D6B05D]/10 blur-[90px]" />
+        <div className="absolute -right-20 bottom-20 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
 
         <div className="relative mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
@@ -612,7 +613,7 @@ Mesaj: ${formData.message || "-"}`;
               {methodSteps.map((item, index) => (
                 <article
                   key={item.step}
-                  className={`group relative rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07] ${
+                  className={`group relative rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07] ${
                     index % 2 === 1 ? "lg:translate-y-14" : ""
                   }`}
                 >
@@ -638,7 +639,7 @@ Mesaj: ${formData.message || "-"}`;
             </div>
           </div>
 
-          <div className="mt-28 rounded-[2.5rem] border border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(214,176,93,0.12),_transparent_34%),rgba(255,255,255,0.045)] p-8 shadow-2xl backdrop-blur-2xl lg:p-10">
+          <div className="mt-28 rounded-[2.5rem] border border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(214,176,93,0.12),_transparent_34%),rgba(255,255,255,0.045)] p-8 shadow-2xl backdrop-blur-xl lg:p-10">
             <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#38BDF8]">
@@ -664,9 +665,9 @@ Mesaj: ${formData.message || "-"}`;
         id="teknoloji"
         className="relative overflow-hidden border-t border-white/10 bg-[#070A12] px-5 py-24 sm:px-8 lg:px-10"
       >
-        <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[130px]" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[130px]" />
-        <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7C3AED]/10 blur-[150px]" />
+        <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[90px]" />
+        <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7C3AED]/10 blur-[100px]" />
 
         <div className="relative mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
@@ -700,7 +701,7 @@ Mesaj: ${formData.message || "-"}`;
             </div>
 
             <div className="relative">
-              <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl backdrop-blur-2xl sm:p-8">
+              <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl backdrop-blur-xl sm:p-8">
                 <div className="mb-8 flex items-center justify-between">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#38BDF8]">
@@ -766,7 +767,7 @@ Mesaj: ${formData.message || "-"}`;
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 -left-4 hidden rounded-3xl border border-white/10 bg-[#05070D]/80 p-5 shadow-2xl backdrop-blur-2xl sm:block">
+              <div className="absolute -bottom-6 -left-4 hidden rounded-3xl border border-white/10 bg-[#05070D]/80 p-5 shadow-xl backdrop-blur-2xl sm:block">
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#D6B05D]">
                   Sistem Notu
                 </p>
@@ -778,7 +779,7 @@ Mesaj: ${formData.message || "-"}`;
           </div>
 
           <div className="mt-20 grid gap-5 md:grid-cols-3">
-            <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl backdrop-blur-2xl">
+            <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-xl backdrop-blur-2xl">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#7DD3FC]">
                 01
               </div>
@@ -788,7 +789,7 @@ Mesaj: ${formData.message || "-"}`;
               </p>
             </article>
 
-            <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl backdrop-blur-2xl">
+            <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-xl backdrop-blur-2xl">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D6B05D]/30 bg-[#D6B05D]/10 text-[#F5D98B]">
                 02
               </div>
@@ -798,7 +799,7 @@ Mesaj: ${formData.message || "-"}`;
               </p>
             </article>
 
-            <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl backdrop-blur-2xl">
+            <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-xl backdrop-blur-2xl">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#7C3AED]/30 bg-[#7C3AED]/10 text-[#C4B5FD]">
                 03
               </div>
@@ -814,8 +815,8 @@ Mesaj: ${formData.message || "-"}`;
         id="neden-nodus"
         className="relative overflow-hidden border-t border-white/10 bg-[#05070D] px-5 py-24 sm:px-8 lg:px-10"
       >
-        <div className="absolute right-0 top-20 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[130px]" />
-        <div className="absolute -left-20 bottom-0 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[130px]" />
+        <div className="absolute right-0 top-20 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[90px]" />
+        <div className="absolute -left-20 bottom-0 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
 
         <div className="relative mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
@@ -838,7 +839,7 @@ Mesaj: ${formData.message || "-"}`;
             {whyItems.map((item, index) => (
               <article
                 key={item.title}
-                className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
+                className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-xl backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
               >
                 <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#D6B05D]/5 blur-3xl transition group-hover:bg-[#38BDF8]/10" />
 
@@ -861,7 +862,7 @@ Mesaj: ${formData.message || "-"}`;
             ))}
           </div>
 
-          <div className="mt-16 overflow-hidden rounded-[2.5rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,_rgba(56,189,248,0.14),_transparent_35%),rgba(255,255,255,0.045)] p-8 shadow-2xl backdrop-blur-2xl lg:p-10">
+          <div className="mt-16 overflow-hidden rounded-[2.5rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,_rgba(56,189,248,0.14),_transparent_35%),rgba(255,255,255,0.045)] p-8 shadow-xl backdrop-blur-2xl lg:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#38BDF8]">
@@ -888,8 +889,8 @@ Mesaj: ${formData.message || "-"}`;
         id="sss"
         className="relative overflow-hidden border-t border-white/10 bg-[#070A12] px-5 py-24 sm:px-8 lg:px-10"
       >
-        <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[130px]" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[130px]" />
+        <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[90px]" />
 
         <div className="relative mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
@@ -910,7 +911,7 @@ Mesaj: ${formData.message || "-"}`;
             {faqItems.map((item, index) => (
               <article
                 key={item.question}
-                className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl backdrop-blur-2xl transition hover:border-white/20 hover:bg-white/[0.07] sm:p-7"
+                className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-xl backdrop-blur-2xl transition hover:border-white/20 hover:bg-white/[0.07] sm:p-7"
               >
                 <div className="flex gap-5">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-[#D6B05D]/30 bg-[#D6B05D]/10 text-sm font-black text-[#F5D98B]">
@@ -937,11 +938,11 @@ Mesaj: ${formData.message || "-"}`;
         className="relative overflow-hidden border-t border-white/10 bg-[#070A12] px-4 py-20 sm:px-8 sm:py-24 lg:px-10"
       >
         <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#D6B05D]/10 blur-[140px]" />
-        <div className="absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-[#38BDF8]/10 blur-[120px]" />
-        <div className="absolute -right-24 bottom-20 h-80 w-80 rounded-full bg-[#7C3AED]/10 blur-[120px]" />
+        <div className="absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-[#38BDF8]/10 blur-[80px]" />
+        <div className="absolute -right-24 bottom-20 h-80 w-80 rounded-full bg-[#7C3AED]/10 blur-[80px]" />
 
         <div className="relative mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,_rgba(214,176,93,0.14),_transparent_34%),radial-gradient(circle_at_bottom_left,_rgba(56,189,248,0.12),_transparent_38%),rgba(255,255,255,0.045)] p-6 shadow-2xl backdrop-blur-2xl sm:p-8 lg:rounded-[2.5rem] lg:p-12">
+          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,_rgba(214,176,93,0.14),_transparent_34%),radial-gradient(circle_at_bottom_left,_rgba(56,189,248,0.12),_transparent_38%),rgba(255,255,255,0.045)] p-6 shadow-xl backdrop-blur-2xl sm:p-8 lg:rounded-[2.5rem] lg:p-12">
             <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#D6B05D] sm:text-sm sm:tracking-[0.28em]">
@@ -961,7 +962,7 @@ Mesaj: ${formData.message || "-"}`;
                     href={whatsappUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="group inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-6 py-4 text-sm font-black text-[#080A12] shadow-2xl shadow-[#D6B05D]/20 transition hover:-translate-y-0.5 hover:bg-[#F5D98B] sm:px-7"
+                    className="group inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-6 py-4 text-sm font-black text-[#080A12] shadow-xl shadow-[#D6B05D]/20 transition hover:-translate-y-0.5 hover:bg-[#F5D98B] sm:px-7"
                   >
                     NODUS MEDYA ile Görüş
                     <span className="ml-2 transition group-hover:translate-x-1">→</span>
@@ -986,7 +987,7 @@ Mesaj: ${formData.message || "-"}`;
                       href={item.href}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noreferrer" : undefined}
-                      className="group rounded-[1.5rem] border border-white/10 bg-[#05070D]/55 p-5 shadow-2xl backdrop-blur-2xl transition hover:-translate-y-1 hover:border-white/20 hover:bg-[#05070D]/80 sm:rounded-[2rem] sm:p-6"
+                      className="group rounded-[1.5rem] border border-white/10 bg-[#05070D]/55 p-5 shadow-xl backdrop-blur-2xl transition hover:-translate-y-1 hover:border-white/20 hover:bg-[#05070D]/80 sm:rounded-[2rem] sm:p-6"
                     >
                       <div className="flex items-center justify-between gap-4">
                         <div className="min-w-0">
@@ -1010,7 +1011,7 @@ Mesaj: ${formData.message || "-"}`;
             </div>
           </div>
 
-          <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl backdrop-blur-2xl sm:p-8 lg:p-10">
+          <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl backdrop-blur-2xl sm:p-8 lg:p-10">
             <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#38BDF8]">
@@ -1104,7 +1105,7 @@ Mesaj: ${formData.message || "-"}`;
 
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#080A12] shadow-2xl shadow-[#D6B05D]/20 transition hover:-translate-y-0.5 hover:bg-[#F5D98B]"
+                  className="inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#080A12] shadow-xl shadow-[#D6B05D]/20 transition hover:-translate-y-0.5 hover:bg-[#F5D98B]"
                 >
                   Formu WhatsApp’tan Gönder
                   <span className="ml-2">→</span>
