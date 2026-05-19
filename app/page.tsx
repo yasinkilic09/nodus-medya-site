@@ -207,7 +207,7 @@ const structuredData = {
       "@id": "https://nodus-medya-site.vercel.app/#organization",
       name: "NODUS MEDYA",
       url: "https://nodus-medya-site.vercel.app",
-      logo: "https://nodus-medya-site.vercel.app/nodus-logo.png",
+      logo: "https://nodus-medya-site.vercel.app/nodus-logo-512.png",
       email: "nodusmedya09@gmail.com",
       telephone: "+90 554 185 98 51",
       address: {
@@ -291,7 +291,7 @@ Mesaj: ${formData.message || "-"}`;
     <div className="absolute inset-0 rounded-[inherit] bg-gradient-to-br from-white/[0.04] via-transparent to-[#D6B05D]/[0.06]" />
 
     <Image
-      src="/nodus-logo-1.png"
+      src="/nodus-logo-512.png"
       alt="NODUS MEDYA Logo"
       width={180}
       height={180}
@@ -421,7 +421,7 @@ Mesaj: ${formData.message || "-"}`;
               <div className="absolute h-20 w-20 rounded-[1.5rem] border border-white/20 -rotate-12" />
               <div className="flex h-44 w-44 items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-[0_0_90px_rgba(214,176,93,0.22)] backdrop-blur-2xl">
   <Image
-    src="/nodus-logo-1.png"
+    src="/nodus-logo-512.png"
     alt="NODUS MEDYA Logo"
     width={250}
     height={250}
