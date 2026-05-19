@@ -6,6 +6,7 @@ import { type FormEvent, useState } from "react";
 const navItems = [
   { label: "Biz Kimiz", href: "#biz-kimiz" },
   { label: "Hizmetler", href: "#hizmetler" },
+  { label: "Alanlar", href: "#calisma-alanlari" },
   { label: "NODUS Metodu", href: "#nodus-metodu" },
   { label: "AdMind.Ai", href: "#admind-ai" },
   { label: "Teknoloji", href: "#teknoloji" },
@@ -251,6 +252,63 @@ const admindHighlights = [
   "Lead / müşteri adayı takibi",
   "Kampanya performans karnesi",
   "Görsel brief ve reklam prompt üretimi",
+];
+
+const sectorItems = [
+  {
+    title: "Restoran & Kafeler",
+    description:
+      "Menü, atmosfer, kampanya ve müşteri deneyimini öne çıkaran sosyal medya ve reklam stratejileri geliştiririz.",
+    icon: "🍽️",
+  },
+  {
+    title: "Güzellik Merkezleri",
+    description:
+      "Bakım, estetik, güven ve hizmet kalitesini ön plana çıkaran premium dijital iletişim dili oluştururuz.",
+    icon: "✨",
+  },
+  {
+    title: "Butikler & Mağazalar",
+    description:
+      "Ürünlerin satışa dönüşmesini destekleyen görsel içerik, kampanya ve sosyal medya akışları kurgularız.",
+    icon: "🛍️",
+  },
+  {
+    title: "Emlak Ofisleri",
+    description:
+      "Portföyleri daha güvenilir, profesyonel ve dikkat çekici şekilde sunan dijital tanıtım sistemleri hazırlarız.",
+    icon: "🏢",
+  },
+  {
+    title: "Sağlık & Klinikler",
+    description:
+      "Güven, uzmanlık ve profesyonellik algısını güçlendiren kontrollü ve kurumsal iletişim stratejileri oluştururuz.",
+    icon: "⚕️",
+  },
+  {
+    title: "Eğitim & Kurslar",
+    description:
+      "Eğitim değerini, başarı hikâyelerini ve kayıt süreçlerini destekleyen içerik ve reklam planları geliştiririz.",
+    icon: "🎓",
+  },
+  {
+    title: "Yerel Hizmet İşletmeleri",
+    description:
+      "Bölgesel görünürlüğü artıran, yakın çevrede müşteri kazanımını destekleyen reklam ve içerik çözümleri üretiriz.",
+    icon: "📍",
+  },
+  {
+    title: "Yazılım & Ar-Ge Şirketleri",
+    description:
+      "Teknoloji şirketleri, yazılım girişimleri ve Ar-Ge odaklı markalar için ürün tanıtımı, dijital görünürlük ve teknoloji odaklı iletişim stratejileri geliştiririz.",
+    icon: "🧠",
+  },
+  {
+    title: "Kurumsal Markalar",
+    description:
+      "Marka prestijini, kurumsal algıyı ve dijital güveni güçlendiren uzun vadeli medya yönetimi süreçleri tasarlarız.",
+    icon: "◆",
+  },
 ];
 
 const faqItems = [
@@ -768,6 +826,89 @@ Mesaj: ${formData.message || "-"}`;
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+            <section
+        id="calisma-alanlari"
+        className="relative overflow-hidden border-t border-white/10 bg-[#05070D] px-5 py-24 sm:px-8 lg:px-10"
+      >
+        <div className="absolute -left-24 top-20 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[90px]" />
+        <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#D6B05D]">
+                Çalışma Alanlarımız
+              </p>
+
+              <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.055em] text-white sm:text-5xl lg:text-6xl">
+                Farklı sektörlerin büyüme düğümlerini doğru stratejiyle çözüyoruz.
+              </h2>
+            </div>
+
+            <p className="max-w-2xl text-base leading-8 text-slate-400 lg:ml-auto">
+              NODUS MEDYA; her sektörü aynı kalıpla ele almaz. İşletmenin hedef kitlesine,
+              satış döngüsüne, marka algısına ve dijital büyüme potansiyeline göre özel
+              reklam, içerik ve medya yönetimi yaklaşımı geliştirir.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            {sectorItems.map((sector) => (
+              <article
+                key={sector.title}
+                className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-xl backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#D6B05D]/30 hover:bg-white/[0.065] sm:p-7"
+              >
+                <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[#D6B05D]/5 blur-3xl transition group-hover:bg-[#D6B05D]/10" />
+
+                <div className="relative">
+                  <div className="mb-6 flex h-13 w-13 items-center justify-center rounded-2xl border border-white/10 bg-[#05070D]/60 text-2xl">
+                    {sector.icon}
+                  </div>
+
+                  <h3 className="text-xl font-black tracking-[-0.035em] text-white sm:text-2xl">
+                    {sector.title}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-7 text-slate-400">
+                    {sector.description}
+                  </p>
+
+                  <div className="mt-6 flex items-center gap-3 text-sm font-black text-[#D6B05D]">
+                    Sektöre özel çözüm
+                    <span className="transition group-hover:translate-x-1">→</span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-14 rounded-[2rem] border border-[#D6B05D]/20 bg-[#D6B05D]/10 p-6 backdrop-blur-xl sm:p-8">
+            <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#F5D98B]">
+                  Sektörünüze özel medya planı
+                </p>
+
+                <h3 className="mt-3 text-2xl font-black tracking-[-0.04em] text-white sm:text-3xl">
+                  Markanız hangi sektörde olursa olsun, doğru büyüme hattını birlikte çıkaralım.
+                </h3>
+
+                <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-300">
+                  Hedef kitlenizi, mevcut dijital durumunuzu ve satış hedeflerinizi analiz ederek
+                  size özel reklam, içerik ve sosyal medya yol haritası hazırlayabiliriz.
+                </p>
+              </div>
+
+              <a
+                href="#iletisim"
+                className="inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#070A12] transition hover:-translate-y-1 hover:bg-[#F5D98B]"
+              >
+                Sektörüme Uygun Plan Al
+              </a>
+            </div>
           </div>
         </div>
       </section>
