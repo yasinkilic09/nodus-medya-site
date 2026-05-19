@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://nodus-medya-site.vercel.app"),
   title: "NODUS MEDYA | Yeni Nesil Reklam & Medya Yönetimi",
   description:
     "NODUS MEDYA; reklam, sosyal medya, marka stratejisi ve teknoloji destekli medya yönetimi çözümleriyle markaların dijital büyüme düğümünü çözer.",
