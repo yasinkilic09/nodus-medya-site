@@ -22,6 +22,7 @@ const serviceItems = [
     description:
       "Markanızın dijital kimliğini; içerik planı, görsel dil, paylaşım stratejisi ve takipçi iletişimiyle profesyonel şekilde yönetiriz.",
     accent: "border-[#D6B05D]/30 bg-[#D6B05D]/10 text-[#F5D98B]",
+    slug: "sosyal-medya-yonetimi",
   },
   {
     number: "02",
@@ -29,6 +30,7 @@ const serviceItems = [
     description:
       "Meta, Google ve dijital reklam kanallarında bütçeyi doğru hedef kitleyle buluşturan ölçülebilir kampanya süreçleri oluştururuz.",
     accent: "border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#7DD3FC]",
+    slug: "reklam-yonetimi",
   },
   {
     number: "03",
@@ -36,6 +38,7 @@ const serviceItems = [
     description:
       "Markanın konumlandırmasını, iletişim tonunu, hedef kitlesini ve büyüme rotasını netleştiren stratejik marka sistemi kurarız.",
     accent: "border-[#7C3AED]/30 bg-[#7C3AED]/10 text-[#C4B5FD]",
+    slug: "marka-stratejisi",
   },
   {
     number: "04",
@@ -43,6 +46,7 @@ const serviceItems = [
     description:
       "Reels, post, story, kampanya metni ve yaratıcı içerik fikirleriyle markanın dijitalde güçlü ve tutarlı görünmesini sağlarız.",
     accent: "border-white/20 bg-white/10 text-white",
+    slug: "icerik-uretimi",
   },
   {
     number: "05",
@@ -50,13 +54,15 @@ const serviceItems = [
     description:
       "Markanızın arama motorlarında ve yapay zeka destekli arama deneyimlerinde daha görünür olması için içerik ve görünürlük stratejileri geliştiririz.",
     accent: "border-[#D6B05D]/30 bg-[#D6B05D]/10 text-[#F5D98B]",
+    slug: "seo-geo-gorunurluk",
   },
   {
     number: "06",
     title: "Teknoloji Destekli Medya Çözümleri",
     description:
       "Reklam, içerik ve medya yönetimi süreçlerini yazılım, veri ve yeni nesil dijital araçlarla daha verimli hale getiririz.",
-    accent: "border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#7DD3FC]",
+    accent: "border-[#38BDF8]/30 bg-[#38BDF8]/10 text-[#7DD3FC]", 
+    slug: "teknoloji-destekli-medya-cozumleri",
   },
 ];
 
@@ -565,10 +571,13 @@ Mesaj: ${formData.message || "-"}`;
                   {service.description}
                 </p>
 
-                <div className="mt-7 flex items-center gap-3 text-sm font-bold text-[#D6B05D]">
-                  Detaylı İncele
-                  <span className="transition group-hover:translate-x-1">→</span>
-                </div>
+                <a
+  href={`#${service.slug}`}
+  className="mt-7 inline-flex items-center gap-3 rounded-full border border-[#D6B05D]/25 bg-[#D6B05D]/10 px-5 py-3 text-sm font-black text-[#F5D98B] transition hover:-translate-y-1 hover:border-[#D6B05D]/45 hover:bg-[#D6B05D]/20"
+>
+  Detaylı İncele
+  <span className="transition group-hover:translate-x-1">→</span>
+</a>
               </article>
             ))}
           </div>
@@ -589,6 +598,94 @@ Mesaj: ${formData.message || "-"}`;
             >
               Görüşme Planla
             </a>
+          </div>
+        </div>
+      </section>
+            <section
+        id="hizmet-detaylari"
+        className="relative overflow-hidden border-t border-white/10 bg-[#070A12] px-5 py-24 sm:px-8 lg:px-10"
+      >
+        <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[90px]" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[90px]" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="max-w-4xl">
+            <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#D6B05D]">
+              Hizmet Detayları
+            </p>
+
+            <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.055em] text-white sm:text-5xl lg:text-6xl">
+              Her hizmeti markanızın büyüme hedeflerine göre kurguluyoruz.
+            </h2>
+
+            <p className="mt-6 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
+              NODUS MEDYA’da hizmetler yalnızca tekil işler olarak değil; strateji,
+              tasarım, reklam, teknoloji ve ölçüm süreçleriyle birlikte ele alınır.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-5">
+            {serviceItems.map((item, index) => (
+              <article
+                key={item.slug}
+                id={item.slug}
+                className="scroll-mt-28 rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl backdrop-blur-xl transition hover:border-[#D6B05D]/30 sm:p-8"
+              >
+                <div className="grid gap-8 lg:grid-cols-[0.35fr_1fr] lg:items-start">
+                  <div>
+                    <p className="text-sm font-black text-[#D6B05D]">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+
+                    <h3 className="mt-4 text-2xl font-black tracking-[-0.045em] text-white sm:text-3xl">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <div>
+                    <p className="text-base leading-8 text-slate-300 sm:text-lg">
+                      {item.description}
+                    </p>
+
+                    <div className="mt-7 grid gap-3 sm:grid-cols-3">
+                      <div className="rounded-2xl border border-white/10 bg-[#05070D]/60 p-4">
+                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                          Odak
+                        </p>
+                        <p className="mt-2 text-sm font-bold text-white">
+                          Stratejik büyüme
+                        </p>
+                      </div>
+
+                      <div className="rounded-2xl border border-white/10 bg-[#05070D]/60 p-4">
+                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                          Yaklaşım
+                        </p>
+                        <p className="mt-2 text-sm font-bold text-white">
+                          Marka özelinde planlama
+                        </p>
+                      </div>
+
+                      <div className="rounded-2xl border border-white/10 bg-[#05070D]/60 p-4">
+                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                          Sonuç
+                        </p>
+                        <p className="mt-2 text-sm font-bold text-white">
+                          Ölçülebilir ilerleme
+                        </p>
+                      </div>
+                    </div>
+
+                    <a
+                      href="#iletisim"
+                      className="mt-7 inline-flex items-center justify-center rounded-full border border-[#D6B05D]/30 bg-[#D6B05D]/10 px-6 py-3 text-sm font-black text-[#F5D98B] transition hover:-translate-y-1 hover:bg-[#D6B05D]/20"
+                    >
+                      Bu hizmet için görüşme talep et
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
