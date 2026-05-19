@@ -366,6 +366,20 @@ const packageItems = [
   },
 ];
 
+const sectorOptions = sectorItems.map((sector) => sector.title);
+
+const packageOptions = packageItems.map((plan) => plan.name);
+
+const goalOptions = [
+  "Daha fazla müşteri kazanmak",
+  "Sosyal medyada profesyonel görünmek",
+  "Reklam performansını artırmak",
+  "Marka bilinirliğini güçlendirmek",
+  "Ürün / hizmet tanıtımı yapmak",
+  "Teknoloji destekli medya yönetimi kurmak",
+  "Henüz net değil, birlikte belirleyelim",
+];
+
 const faqItems = [
   {
     question: "NODUS MEDYA hangi hizmetleri sunar?",
@@ -442,20 +456,28 @@ export default function NodusMedyaHomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const [formData, setFormData] = useState({
-    name: "",
-    brand: "",
-    phone: "",
-    service: "Sosyal Medya Yönetimi",
-    message: "",
-  });
+  name: "",
+  brand: "",
+  phone: "",
+  sector: "Restoran & Kafeler",
+  service: "Sosyal Medya Yönetimi",
+  plan: "Büyüme Paketi",
+  goal: "Daha fazla müşteri kazanmak",
+  socialAccount: "",
+  message: "",
+});
 
   const leadMessage = `Merhaba NODUS MEDYA, web siteniz üzerinden bilgi almak istiyorum.
 
 Ad Soyad: ${formData.name || "-"}
 Marka / İşletme: ${formData.brand || "-"}
 Telefon: ${formData.phone || "-"}
+Sektör: ${formData.sector || "-"}
 İlgilendiğim Hizmet: ${formData.service || "-"}
-Mesaj: ${formData.message || "-"}`;
+İlgilendiğim Paket: ${formData.plan || "-"}
+Aylık Hedef: ${formData.goal || "-"}
+Sosyal Medya Hesabı: ${formData.socialAccount || "-"}
+Ek Mesaj: ${formData.message || "-"}`;
 
   const leadWhatsappUrl = `https://wa.me/905541859851?text=${encodeURIComponent(
     leadMessage
@@ -1619,87 +1641,174 @@ Mesaj: ${formData.message || "-"}`;
 
               <form onSubmit={handleFormSubmit} className="grid gap-4">
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <input
-                    type="text"
-                    required
-                    placeholder="Ad Soyad"
-                    value={formData.name}
-                    onChange={(event) =>
-                      setFormData((prev) => ({
-                        ...prev,
-                        name: event.target.value,
-                      }))
-                    }
-                    className="w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-[#D6B05D]/50"
-                  />
+  <div>
+    <label className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      Ad Soyad
+    </label>
+    <input
+      type="text"
+      value={formData.name}
+      onChange={(event) =>
+        setFormData((prev) => ({ ...prev, name: event.target.value }))
+      }
+      placeholder="Adınızı yazın"
+      className="mt-2 w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-4 py-4 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-[#D6B05D]/50"
+    />
+  </div>
 
-                  <input
-                    type="text"
-                    required
-                    placeholder="Marka / İşletme Adı"
-                    value={formData.brand}
-                    onChange={(event) =>
-                      setFormData((prev) => ({
-                        ...prev,
-                        brand: event.target.value,
-                      }))
-                    }
-                    className="w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-[#D6B05D]/50"
-                  />
-                </div>
+  <div>
+    <label className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      Marka / İşletme
+    </label>
+    <input
+      type="text"
+      value={formData.brand}
+      onChange={(event) =>
+        setFormData((prev) => ({ ...prev, brand: event.target.value }))
+      }
+      placeholder="Marka adınızı yazın"
+      className="mt-2 w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-4 py-4 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-[#D6B05D]/50"
+    />
+  </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <input
-                    type="tel"
-                    placeholder="Telefon"
-                    value={formData.phone}
-                    onChange={(event) =>
-                      setFormData((prev) => ({
-                        ...prev,
-                        phone: event.target.value,
-                      }))
-                    }
-                    className="w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-[#D6B05D]/50"
-                  />
+  <div>
+    <label className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      Telefon / WhatsApp
+    </label>
+    <input
+      type="tel"
+      value={formData.phone}
+      onChange={(event) =>
+        setFormData((prev) => ({ ...prev, phone: event.target.value }))
+      }
+      placeholder="05xx xxx xx xx"
+      className="mt-2 w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-4 py-4 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-[#D6B05D]/50"
+    />
+  </div>
 
-                  <select
-                    value={formData.service}
-                    onChange={(event) =>
-                      setFormData((prev) => ({
-                        ...prev,
-                        service: event.target.value,
-                      }))
-                    }
-                    className="w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition focus:border-[#D6B05D]/50"
-                  >
-                    {serviceOptions.map((service) => (
-                      <option key={service} value={service} className="bg-[#05070D] text-white">
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+  <div>
+    <label className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      Sektör
+    </label>
+    <select
+      value={formData.sector}
+      onChange={(event) =>
+        setFormData((prev) => ({ ...prev, sector: event.target.value }))
+      }
+      className="mt-2 w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-4 py-4 text-sm text-white outline-none transition focus:border-[#D6B05D]/50"
+    >
+      {sectorOptions.map((sector) => (
+        <option key={sector} value={sector}>
+          {sector}
+        </option>
+      ))}
+    </select>
+  </div>
 
-                <textarea
-                  rows={5}
-                  placeholder="Kısaca ihtiyacınızı yazın..."
-                  value={formData.message}
-                  onChange={(event) =>
-                    setFormData((prev) => ({
-                      ...prev,
-                      message: event.target.value,
-                    }))
-                  }
-                  className="w-full resize-none rounded-2xl border border-white/10 bg-[#05070D]/70 px-5 py-4 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-[#D6B05D]/50"
-                />
+  <div>
+    <label className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      İlgilenilen Hizmet
+    </label>
+    <select
+      value={formData.service}
+      onChange={(event) =>
+        setFormData((prev) => ({ ...prev, service: event.target.value }))
+      }
+      className="mt-2 w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-4 py-4 text-sm text-white outline-none transition focus:border-[#D6B05D]/50"
+    >
+      {serviceOptions.map((service) => (
+        <option key={service} value={service}>
+          {service}
+        </option>
+      ))}
+    </select>
+  </div>
 
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#080A12] shadow-xl shadow-[#D6B05D]/20 transition hover:-translate-y-0.5 hover:bg-[#F5D98B]"
-                >
-                  Formu WhatsApp’tan Gönder
-                  <span className="ml-2">→</span>
-                </button>
+  <div>
+    <label className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      İlgilenilen Paket
+    </label>
+    <select
+      value={formData.plan}
+      onChange={(event) =>
+        setFormData((prev) => ({ ...prev, plan: event.target.value }))
+      }
+      className="mt-2 w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-4 py-4 text-sm text-white outline-none transition focus:border-[#D6B05D]/50"
+    >
+      {packageOptions.map((plan) => (
+        <option key={plan} value={plan}>
+          {plan}
+        </option>
+      ))}
+    </select>
+  </div>
+
+  <div>
+    <label className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      Aylık Hedef
+    </label>
+    <select
+      value={formData.goal}
+      onChange={(event) =>
+        setFormData((prev) => ({ ...prev, goal: event.target.value }))
+      }
+      className="mt-2 w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-4 py-4 text-sm text-white outline-none transition focus:border-[#D6B05D]/50"
+    >
+      {goalOptions.map((goal) => (
+        <option key={goal} value={goal}>
+          {goal}
+        </option>
+      ))}
+    </select>
+  </div>
+
+  <div>
+    <label className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+      Sosyal Medya Hesabı
+    </label>
+    <input
+      type="text"
+      value={formData.socialAccount}
+      onChange={(event) =>
+        setFormData((prev) => ({ ...prev, socialAccount: event.target.value }))
+      }
+      placeholder="@kullaniciadi veya link"
+      className="mt-2 w-full rounded-2xl border border-white/10 bg-[#05070D]/70 px-4 py-4 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-[#D6B05D]/50"
+    />
+  </div>
+</div>
+
+<div className="mt-4">
+  <label className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+    Ek Mesaj
+  </label>
+  <textarea
+    value={formData.message}
+    onChange={(event) =>
+      setFormData((prev) => ({ ...prev, message: event.target.value }))
+    }
+    placeholder="Markanız, hedefiniz veya ihtiyacınız hakkında kısa bilgi yazabilirsiniz."
+    rows={5}
+    className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-[#05070D]/70 px-4 py-4 text-sm leading-7 text-white outline-none transition placeholder:text-slate-600 focus:border-[#D6B05D]/50"
+  />
+</div>
+
+<div className="mt-6 rounded-2xl border border-[#D6B05D]/20 bg-[#D6B05D]/10 p-4">
+  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F5D98B]">
+    WhatsApp ön görüşme mesajı
+  </p>
+  <p className="mt-2 text-sm leading-7 text-slate-300">
+    Formu gönderdiğinizde bilgileriniz otomatik olarak WhatsApp mesajına dönüştürülür.
+    Bu sayfa üzerinde herhangi bir veri kaydı yapılmaz.
+  </p>
+</div>
+
+<button
+  type="submit"
+  className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#070A12] transition hover:-translate-y-1 hover:bg-[#F5D98B]"
+>
+  WhatsApp Üzerinden Görüşme Başlat
+</button>
               </form>
             </div>
           </div>
