@@ -35,6 +35,21 @@ export const metadata: Metadata = {
     siteName: "NODUS MEDYA",
     locale: "tr_TR",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "NODUS MEDYA Yeni Nesil Reklam ve Medya Yönetimi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NODUS MEDYA | Yeni Nesil Reklam & Medya Yönetimi",
+    description:
+      "Markanızın büyüme düğümünü çözen yeni nesil reklam ve medya yönetimi markası.",
+    images: ["/og-image.png"],
   },
 };
 
