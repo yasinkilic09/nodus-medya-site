@@ -8,6 +8,7 @@ const navItems = [
   { label: "Hizmetler", href: "#hizmetler" },
   { label: "NODUS Metodu", href: "#nodus-metodu" },
   { label: "Teknoloji", href: "#teknoloji" },
+  { label: "SSS", href: "#sss" },
   { label: "İletişim", href: "#iletisim" },
 ];
 
@@ -167,6 +168,34 @@ const contactItems = [
     label: "Lokasyon",
     value: "Aydın / Türkiye",
     href: "#",
+  },
+];
+
+const faqItems = [
+  {
+    question: "NODUS MEDYA hangi hizmetleri sunar?",
+    answer:
+      "NODUS MEDYA; sosyal medya yönetimi, reklam yönetimi, marka stratejisi, içerik üretimi, SEO & GEO odaklı görünürlük ve teknoloji destekli medya çözümleri sunar.",
+  },
+  {
+    question: "Reklam bütçesi hizmet ücretine dahil mi?",
+    answer:
+      "Reklam bütçesi genellikle hizmet ücretinden ayrı planlanır. Marka hedeflerine, sektöre ve kampanya süresine göre en doğru reklam bütçesi birlikte belirlenir.",
+  },
+  {
+    question: "Çalışma süreci nasıl ilerliyor?",
+    answer:
+      "Önce markanın mevcut durumu analiz edilir. Ardından strateji, içerik planı, tasarım dili, reklam yönetimi ve performans ölçüm süreci oluşturulur.",
+  },
+  {
+    question: "Sadece Aydın’daki işletmelerle mi çalışıyorsunuz?",
+    answer:
+      "NODUS MEDYA Aydın merkezli bir marka olsa da dijital reklam, sosyal medya ve medya yönetimi süreçleri farklı şehirlerdeki markalar için de yürütülebilir.",
+  },
+  {
+    question: "NODUS MEDYA’yı klasik ajanslardan ayıran şey nedir?",
+    answer:
+      "NODUS MEDYA reklam, içerik ve medya yönetimini birbirinden kopuk işler olarak değil; strateji, teknoloji, tasarım ve ölçüm odaklı tek bir büyüme sistemi olarak ele alır.",
   },
 ];
 
@@ -802,6 +831,54 @@ Mesaj: ${formData.message || "-"}`;
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+            <section
+        id="sss"
+        className="relative overflow-hidden border-t border-white/10 bg-[#070A12] px-5 py-24 sm:px-8 lg:px-10"
+      >
+        <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-[#38BDF8]/10 blur-[130px]" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#D6B05D]/10 blur-[130px]" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#D6B05D]">
+              Sıkça Sorulan Sorular
+            </p>
+
+            <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">
+              NODUS MEDYA ile çalışmadan önce bilmeniz gerekenler.
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
+              Reklam, sosyal medya ve dijital büyüme süreçleriyle ilgili en çok merak edilen soruları sade şekilde yanıtladık.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-14 grid max-w-5xl gap-4">
+            {faqItems.map((item, index) => (
+              <article
+                key={item.question}
+                className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl backdrop-blur-2xl transition hover:border-white/20 hover:bg-white/[0.07] sm:p-7"
+              >
+                <div className="flex gap-5">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-[#D6B05D]/30 bg-[#D6B05D]/10 text-sm font-black text-[#F5D98B]">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-black tracking-[-0.03em] text-white sm:text-xl">
+                      {item.question}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
+                      {item.answer}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
