@@ -130,11 +130,18 @@ const whyItems = [
   },
 ];
 
+const whatsappMessage =
+  "Merhaba NODUS MEDYA, hizmetleriniz hakkında bilgi almak istiyorum.";
+
+const whatsappUrl = `https://wa.me/905541859851?text=${encodeURIComponent(
+  whatsappMessage
+)}`;
+
 const contactItems = [
   {
     label: "WhatsApp",
-    value: "Hızlı görüşme ve teklif için",
-    href: "https://wa.me/905541859851",
+    value: "0554 185 98 51",
+    href: whatsappUrl,
   },
   {
     label: "Instagram",
@@ -144,7 +151,7 @@ const contactItems = [
   {
     label: "E-posta",
     value: "nodusmedya09@gmail.com",
-    href: "mailto:info@nodusmedya.com",
+    href: "mailto:nodusmedya09@gmail.com",
   },
   {
     label: "Lokasyon",
@@ -789,7 +796,7 @@ export default function NodusMedyaHomePage() {
 
                 <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                   <a
-                    href="https://wa.me/905XXXXXXXXX"
+                    href={whatsappUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="group inline-flex items-center justify-center rounded-full bg-[#D6B05D] px-7 py-4 text-sm font-black text-[#080A12] shadow-2xl shadow-[#D6B05D]/20 transition hover:-translate-y-0.5 hover:bg-[#F5D98B]"
@@ -799,7 +806,7 @@ export default function NodusMedyaHomePage() {
                   </a>
 
                   <a
-                    href="mailto:info@nodusmedya.com"
+                    href="mailto:nodusmedya09@gmail.com"
                     className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] px-7 py-4 text-sm font-bold text-white backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white/[0.1]"
                   >
                     E-posta Gönder
